@@ -1,0 +1,2 @@
+# Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures
+A comprehensive hardware-based analysis of frequency modulation and digital pulse-code systems. This repository documents the end-to-end implementation of analog FM and 4-bit PCM architectures on the Emona ETT-101, featuring signal reconstruction, Nyquist sampling verification, and digital codec performance testing.
