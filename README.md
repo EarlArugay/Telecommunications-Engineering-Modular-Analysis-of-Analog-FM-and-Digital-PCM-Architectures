@@ -17,7 +17,7 @@ The FM signal is generated using a Voltage Controlled Oscillator (VCO). The proc
 - Frequency Deviation: Applying a message signal—such as a $2\text{kHz}$ square wave or real-time audio from a speech module—to the VCO input. This causes the carrier to shift above and below the rest frequency.
 - Proportionality: Observing that the amount of frequency shift (deviation) is directly controlled by the amplitude of the message signal.
 
-### **1.1 Signal Synthesis (Modulation) Experimental Results**
+#### **1.1 Signal Synthesis (Modulation) Experimental Results**
 <details>
 <summary>View Part 1 Documentation</summary>
 
@@ -36,7 +36,7 @@ To reconstruct the original message from the frequency-shifted carrier, a Zero-C
 - Pulse Conversion: The system generates fixed-width pulses at every zero-crossing of the squared signal. This creates a pulse train where the duty cycle changes in synchronization with the FM signal's frequency.
 - Reconstruction: A Baseband Low-Pass Filter (LPF) extracts the average DC component of the pulse train, smoothing the variations back into the original analog message waveform.
 
-### **1.2 Signal Recovery (Demodulation) Experimental Results**
+#### **1.2 Signal Recovery (Demodulation) Experimental Results**
 <details>
 <summary>View Part 1 Documentation</summary>
 
