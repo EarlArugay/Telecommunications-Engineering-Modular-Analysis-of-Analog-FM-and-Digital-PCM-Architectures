@@ -130,10 +130,49 @@ To recover the signal, the PCM Decoder performs the inverse operation:
 </details>
 
 
-## Part 4: 1-bit Delta Modulation
+## Part 4: Bandwidth Limiting & Restoring Digital Signals
 
+In an ideal lab environment, digital signals are perfect square waves. However, in real-world telecommunications, the physical medium (cables, air, or fiber) has a limited bandwidth. This acts as a Low-Pass Filter, removing high-frequency components and "smearing" the pulses. This section demonstrates how to manage this bandwidth limitation and use a Decision Circuit to restore the digital bitstream to its original state.
 
+### 4.1. Simulating the Channel (Bandwidth Limiting)
+A digital bitstream (from the PCM or Delta Modulator) was passed through a Tuneable Low-Pass Filter:
 
+- Rounding: As the filter's cut-off frequency was lowered, the sharp edges of the pulses began to round off.
+
+- Intersymbol Interference (ISI): At very low bandwidths, the pulses began to "smear" into each other, making it difficult for a receiver to distinguish between a '1' and a '0'.
+
+#### **4.1 Simulating the Channel (Bandwidth Limiting) Experimental Results**
+<details>
+<summary>View Part 3.1 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
+*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
+*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+
+</details>
+
+### 4.2. Signal Restoration (The Decision Circuit)
+To recover the distorted data, a Decision Circuit (often a Comparator with a Variable DC Threshold) was used:
+
+- Thresholding: The "smeared" signal was compared against a fixed voltage level.
+
+- Regeneration: If the incoming voltage was above the threshold, the circuit snapped to a high state; if below, it snapped to a low state. This effectively "squared up" the signal and removed the noise and rounding caused by the bandwidth-limited channel.
+
+#### **4.2 Signal Restoration (The Decision Circuit) Experimental Results**
+<details>
+<summary>View Part 3.1 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
+*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
+*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+
+</details>
 
 ## Results & Data Analysis
 
