@@ -5,7 +5,7 @@ A comprehensive hardware-based analysis of frequency modulation and digital puls
 * [Part 1: Analog Frequency Modulation & Demodulation](#part-1-analog-frequency-modulation--demodulation)
 * [Part 2: Sampling and Reconstruction](#part-2-sampling-and-reconstruction)
 * [Part 3: PCM Encoding & Decoding](#part-3-pcm-encoding--decoding)
-* [Part 4: 1-bit Delta Modulation](#part-4-1-bit-delta-modulation)
+* [Part 4: Bandwidth Limiting & Restoring Digital Signals](#part-4-Bandwidth-Limiting-&-Restoring-Digital-Signals)
 * [Results & Data Analysis](#results--data-analysis)
 
 ## Part 1: Analog Frequency Modulation & Demodulation
