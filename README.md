@@ -175,35 +175,87 @@ The conversion process involves three distinct steps implemented through the PCM
 - Quantization: The continuous range of the sample is divided into discrete levels. In this setup, we utilize a 4-bit system, providing $2^4 = 16$ possible quantization levels.
 - Encoding: Each quantized level is converted into a serial string of binary digits (bits), creating a high-speed digital bitstream.
 
-#### **3.1 Encoding (Analog to Digital) Experimental Results**
+#### **3.1 Encoding (Analog to Digital) Experimental Diagrams**
 <details>
-<summary>View Part 3.1 Documentation</summary>
+<summary>View Part 3.1 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4451.jpg)
+*Figure 3.1.1: PCM Encoding using stating DC voltage Setup 2.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4452.jpg)
+*Figure 3.1.2: PCM Encoding using stating DC voltage Diagram 2.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4454.jpg)
+*Figure 3.1.3: PCM Encoding using stating DC voltage Setup 2.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4454_(1).jpg)
+*Figure 3.1.4: PCM Encoding using stating DC voltage Diagram 2.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4457.jpg)
+*Figure 3.1.5: PCM Encoding using variable DC voltage Setup.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4458.jpg)
+*Figure 3.1.6: PCM Encoding using variable DC voltage Diagram.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4463.jpg)
+*Figure 3.1.7: PCM Encoding with continuous changing voltage Setup.*
+
 
 </details>
 
-### 3.2. Decoding (Digital to Analog)
+#### **3.2 Encoding (Analog to Digital) Experimental Results**
+<details>
+<summary>View Part 3.2 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-223946.png)
+
+*Figure 3.2.1: PCM Encoding using stating DC voltage Result.*
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-224006.png)
+
+*Figure 3.2.2: PCM Encoding using stating DC voltage Result.*
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-224028.png)
+
+*Figure 3.2.3: PCM Encoding using variable DC voltage Result.*
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-224043.png)
+
+*Figure 3.2.4: PCM Encoding using variable DC voltage Result.*
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-224059.png)
+
+*Figure 3.2.5: PCM Encoding using variable DC voltage Result.*
+
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/Screenshot-2026-03-07-224114.png)
+
+*Figure 3.2.6: PCM Encoding with continuous changing voltage Result.*
+
+</details>
+
+### 3.3. Decoding (Digital to Analog)
 To recover the signal, the PCM Decoder performs the inverse operation:
 - Digital Reception: The decoder identifies the start of each 4-bit word using a "Frame Synchronization" signal.
 - D/A Conversion: The binary words are converted back into discrete voltage levels, creating a "staircase" approximation of the original signal.
 - Smoothing: The output is passed through a Low-Pass Filter to remove the sharp edges of the staircase and restore the smooth analog waveform.
 
-#### **3.2 Decoding (Digital to Analog) Experimental Results**
+#### **3.4 Decoding (Digital to Analog) Experimental Diagrams**
 <details>
-<summary>View Part 3.2 Documentation</summary>
+<summary>View Part 3.4 diagrams</summary>
 
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+*Figure 3.4.1: Internal CAL signal showing the verified 1Vp-p square wave.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+*Figure 3.4.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+*Figure 3.4.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+
+</details>
+
+#### **3.5 Decoding (Digital to Analog) Experimental Results**
+<details>
+<summary>View Part 3.5 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
+*Figure 3.5.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
+*Figure 3.5.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+*Figure 3.5.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
 
 </details>
 
@@ -214,41 +266,63 @@ In an ideal lab environment, digital signals are perfect square waves. However, 
 
 ### 4.1. Simulating the Channel (Bandwidth Limiting)
 A digital bitstream (from the PCM or Delta Modulator) was passed through a Tuneable Low-Pass Filter:
-
 - Rounding: As the filter's cut-off frequency was lowered, the sharp edges of the pulses began to round off.
-
 - Intersymbol Interference (ISI): At very low bandwidths, the pulses began to "smear" into each other, making it difficult for a receiver to distinguish between a '1' and a '0'.
 
-#### **4.1 Simulating the Channel (Bandwidth Limiting) Experimental Results**
+#### **4.2 Simulating the Channel (Bandwidth Limiting) Experimental Diagrams**
 <details>
-<summary>View Part 3.1 Documentation</summary>
+<summary>View Part 4.2 Diagrams</summary>
 
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+*Figure 4.2.1: Internal CAL signal showing the verified 1Vp-p square wave.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+*Figure 4.2.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+*Figure 4.2.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
 
 </details>
 
-### 4.2. Signal Restoration (The Decision Circuit)
-To recover the distorted data, a Decision Circuit (often a Comparator with a Variable DC Threshold) was used:
-
-- Thresholding: The "smeared" signal was compared against a fixed voltage level.
-
-- Regeneration: If the incoming voltage was above the threshold, the circuit snapped to a high state; if below, it snapped to a low state. This effectively "squared up" the signal and removed the noise and rounding caused by the bandwidth-limited channel.
-
-#### **4.2 Signal Restoration (The Decision Circuit) Experimental Results**
+#### **4.3 Simulating the Channel (Bandwidth Limiting) Experimental Results**
 <details>
-<summary>View Part 3.1 Documentation</summary>
+<summary>View Part 4.3 Documentation</summary>
 
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+*Figure 4.3.1: Internal CAL signal showing the verified 1Vp-p square wave.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+*Figure 4.3.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+*Figure 4.3.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+
+</details>
+
+### 4.4. Signal Restoration (The Decision Circuit)
+To recover the distorted data, a Decision Circuit (often a Comparator with a Variable DC Threshold) was used:
+- Thresholding: The "smeared" signal was compared against a fixed voltage level.
+- Regeneration: If the incoming voltage was above the threshold, the circuit snapped to a high state; if below, it snapped to a low state. This effectively "squared up" the signal and removed the noise and rounding caused by the bandwidth-limited channel.
+
+#### **4.5 Signal Restoration (The Decision Circuit) Experimental Diagrams**
+<details>
+<summary>View Part 4.5 Diagrams</summary>
+
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
+*Figure 4.5.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
+*Figure 4.5.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+*Figure 4.5.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+
+</details>
+
+#### **4.6 Signal Restoration (The Decision Circuit) Experimental Results**
+<details>
+<summary>View Part 4.6 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
+*Figure 4.6.1: Internal CAL signal showing the verified 1Vp-p square wave.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
+*Figure 4.6.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+*Figure 4.6.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
 
 </details>
 
