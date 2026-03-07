@@ -17,35 +17,82 @@ The FM signal is generated using a Voltage Controlled Oscillator (VCO). The proc
 - Frequency Deviation: Applying a message signal—such as a $2\text{kHz}$ square wave or real-time audio from a speech module—to the VCO input. This causes the carrier to shift above and below the rest frequency.
 - Proportionality: Observing that the amount of frequency shift (deviation) is directly controlled by the amplitude of the message signal.
 
-#### **1.1 Signal Synthesis (Modulation) Experimental Results**
+#### **1.2 Signal Synthesis (Modulation) Experimental Diagrams**
 <details>
-<summary>View Part 1.1 Documentation</summary>
+<summary>View Part 1.2 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4314.jpg)
+*Figure 1.2.1: FM Modulation Setup.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4319.jpg)
+*Figure 1.2.2: FM Modulation Diagram.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4319.jpg)
+*Figure 1.2.3: Considering the Spectral Composition of FM Setup.*
 
 </details>
 
-### 1.2 Signal Recovery (Demodulation)
+#### **1.3 Signal Synthesis (Modulation) Experimental Results**
+<details>
+<summary>View Part 1.1 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.2.jpg)
+*Figure 1.3.1: Carrier and Modulating Signal*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.1.jpg)
+*Figure 1.3.2: Frequency Modulated Signal*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.3.jpg)
+*Figure 1.3.3: Frequency Modulated Signal with minimum VCO*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.4.jpg)
+*Figure 1.3.3: Frequency Modulated Signal with middle VCO*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.5.jpg)
+*Figure 1.3.3: Frequency Modulated Signal with max VCO*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/9.11.jpg)
+*Figure 1.3.3: Spectral Composition of FM Signal.*
+
+</details>
+
+### 1.4 Signal Recovery (Demodulation)
 To reconstruct the original message from the frequency-shifted carrier, a Zero-Crossing Detector (ZCD) architecture is employed:
 - Limiting: The received signal passes through a comparator to remove amplitude fluctuations and produce a clean square wave.
 - Pulse Conversion: The system generates fixed-width pulses at every zero-crossing of the squared signal. This creates a pulse train where the duty cycle changes in synchronization with the FM signal's frequency.
 - Reconstruction: A Baseband Low-Pass Filter (LPF) extracts the average DC component of the pulse train, smoothing the variations back into the original analog message waveform.
 
-#### **1.2 Signal Recovery (Demodulation) Experimental Results**
+#### **1.5 Signal Recovery (Demodulation) Experimental Diagrams**
+<details>
+<summary>View Part 1.2 Diagrams</summary>
+
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4328.jpg)
+*Figure 1.5.1: Zero Crossing Detector Setup.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4329.jpg)
+*Figure 1.5.1: Zero Crossing Detector Diagram.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4330.jpg)
+*Figure 1.5.2: Operation of Zero Crossing Setup.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4331.jpg)
+*Figure 1.5.2: Operation of Zero Crossing Diagram.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4336.jpg)
+*Figure 1.5.3: Transmitting and Receiving sinewave using FM Setup.*
+![Calibration Waveform](Diagrams/FM_Modulation_Demodulation/IMG_4337.jpg)
+*Figure 1.5.3: Transmitting and Receiving sinewave using FM Diagram.*
+
+</details>
+
+#### **1.6 Signal Recovery (Demodulation) Experimental Results**
 <details>
 <summary>View Part 1.2 Documentation</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/10-Part-B-1-FM-TP.png)
+
+*Figure 1.6.1: Zero Crossing Detector Result.*
+
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/10-Part-C-1-Fig10.png)
+
+*Figure 1.6.2: Operation of Zero Crossing.*
+
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/10-Part-C-2-Fig12.png)
+
+*Figure 1.6.3: Operation of Zero Crossing.*
+
+![Calibration Waveform](Waveform_Captures/FM-Modulation-Demodulation/10-Part-D-1-Fig16.png)
+
+*Figure 1.6.4: Transmitting and Receiving sinewave using FM Result.*
 
 </details>
 
@@ -57,34 +104,65 @@ The continuous message signal is converted into a series of pulses using a Dual 
 - Sampling Clock: A high-frequency pulse train (Sampling Signal) is used to open and close the switch at regular intervals.
 - Sampled Output: The output consists of "slices" of the original message. We observe how the pulse amplitude follows the original waveform’s shape, creating a Pulse Amplitude Modulated (PAM) signal.
 
-#### **2.1 The Sampling Process Experimental Results**
+#### **2.1 The Sampling Process Experimental Diagrams**
 <details>
-<summary>View Part 2.1 Documentation</summary>
+<summary>View Part 2.1 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4343.jpg)
+*Figure 2.2.1: Sampling a simple message Setup.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4344.jpg)
+*Figure 2.2.2: Sampling a simple message Diagram.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4349.jpg)
+*Figure 2.2.3: Sampling a voice Setup.*
+
 
 </details>
 
-### 2.2. Signal Reconstruction
+#### **2.2 The Sampling Process Experimental Results**
+<details>
+<summary>View Part 2.2 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.1.jpg)
+*Figure 2.2.1: Sampled simple message without VDC.*
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.2.jpg)
+*Figure 2.2.2: Sampled simple message without VDC.*
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.7.jpg)
+*Figure 2.2.3: Sampled voice without direct voice.*
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.6.jpg)
+*Figure 2.2.4: Sampled voice without direct voice.*
+
+</details>
+
+### 2.3. Signal Reconstruction
 To return the discrete samples back to their original analog form:
 - Filtering: The sampled signal is passed through a Tuneable Low-Pass Filter.
 - Recovery: The filter removes the high-frequency "switching" components, leaving behind the smooth, original baseband message.
 
-#### **2.2 Signal Reconstruction Experimental Results**
+#### **2.3 Signal Reconstruction Experimental Diagrams**
 <details>
-<summary>View Part 2.2 Documentation</summary>
+<summary>View Part 2.3 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 1.1.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 1.1.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 1.1.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4349.jpg)
+*Figure 2.3.1: Reconstructing a simple message Setup*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4350.jpg)
+*Figure 2.3.2: Reconstructing a simple message Diagram.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4352.jpg)
+*Figure 2.3.3: Aliasing Setup.*
+![Calibration Waveform](Diagrams/Sampling_and_Reconstruction/IMG_4352_(1).jpg)
+*Figure 2.3.4: Aliasing Diagram.*
+
+</details>
+
+#### **2.4 Signal Reconstruction Experimental Results**
+<details>
+<summary>View Part 2.4 Documentation</summary>
+
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.4.jpg)
+*Figure 2.4.1: Reconstructed Signal.*
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.5.jpg)
+*Figure 2.4.2: Reconstructed Signal.*
+![Calibration Waveform](Waveform_Captures/Sampling-and-Reconstruction/11.9.jpg)
+*Figure 2.4.3: Aliasing Result.*
 
 </details>
 
