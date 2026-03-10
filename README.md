@@ -324,12 +324,12 @@ To recover the distorted data, a Decision Circuit (often a Comparator with a Var
 
 ## Results & Data Analysis
 
-**[View or Download Complete Experimental Question and Answers (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures.pdf)**
+**[View or Download Complete Experimental Question and Answers (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures-.pdf)**
 
 ## Project Resources
 For full access to the raw datasets, formulas, and the complete Q&A worksheet, please use the links below:
 
-* **[Download Complete Experimental Q&A (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures.pdf)**
+* **[Download Complete Experimental Q&A (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures-.pdf)**
 * **[Browse All Captured Documentation](Waveform_Captures/)**
 
 
