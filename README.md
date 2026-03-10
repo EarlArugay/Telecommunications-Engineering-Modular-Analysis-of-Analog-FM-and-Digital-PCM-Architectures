@@ -243,7 +243,7 @@ To recover the signal, the PCM Decoder performs the inverse operation:
 *Figure 3.4.2: Decoding the PCM Data Diagram.*
 ![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4475.jpg)
 *Figure 3.4.3: Recovering the message Setup.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4476.jpg)
 *Figure 3.4.4: Recovering the message Diagram.*
 
 </details>
