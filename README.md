@@ -5,7 +5,7 @@ A comprehensive hardware-based analysis of frequency modulation and digital puls
 * [Part 1: Analog Frequency Modulation & Demodulation](#part-1-analog-frequency-modulation--demodulation)
 * [Part 2: Sampling and Reconstruction](#part-2-sampling-and-reconstruction)
 * [Part 3: PCM Encoding & Decoding](#part-3-pcm-encoding--decoding)
-* [Part 4: Bandwidth Limiting & Restoring Digital Signals](#part-4-Bandwidth-Limiting-&-Restoring-Digital-Signals)
+* [Part 4: Bandwidth Limiting & Restoring Digital Signals](#part-4-bandwidth-limiting--restoring-digital-signals)
 * [Results & Data Analysis](#results--data-analysis)
 
 ## Part 1: Analog Frequency Modulation & Demodulation
@@ -237,12 +237,14 @@ To recover the signal, the PCM Decoder performs the inverse operation:
 <details>
 <summary>View Part 3.4 diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 3.4.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 3.4.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4471.jpg)
+*Figure 3.4.1: Decoding the PCM Data Seutp.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4471_(1).jpg)
+*Figure 3.4.2: Decoding the PCM Data Diagram.*
+![Calibration Waveform](Diagrams/PCM_Encoding_Decoding/IMG_4475.jpg)
+*Figure 3.4.3: Recovering the message Setup.*
 ![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 3.4.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+*Figure 3.4.4: Recovering the message Diagram.*
 
 </details>
 
@@ -250,12 +252,11 @@ To recover the signal, the PCM Decoder performs the inverse operation:
 <details>
 <summary>View Part 3.5 Documentation</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 3.5.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 3.5.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 3.5.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/fig_5.png)
+*Figure 3.5.1: Decoding the PCM Data Result.*
+![Calibration Waveform](Waveform_Captures/PCM-Encoding-Decoding/fig_10.png)
+*Figure 3.5.2: Recovering the message Result.*
+
 
 </details>
 
@@ -273,12 +274,11 @@ A digital bitstream (from the PCM or Delta Modulator) was passed through a Tunea
 <details>
 <summary>View Part 4.2 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 4.2.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 4.2.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 4.2.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/Bandwidth_Limiting_Restoring_Digital_Signals/IMG_4682.jpg)
+*Figure 4.2.1: Simulating the Channel (Bandwidth Limiting) Setup.*
+![Calibration Waveform](Diagrams/Bandwidth_Limiting_Restoring_Digital_Signals/IMG_4683.jpg)
+*Figure 4.2.2: Simulating the Channel (Bandwidth Limiting) Diagram.*
+
 
 </details>
 
@@ -286,12 +286,9 @@ A digital bitstream (from the PCM or Delta Modulator) was passed through a Tunea
 <details>
 <summary>View Part 4.3 Documentation</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 4.3.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 4.3.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 4.3.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Waveform_Captures/Bandwidth-Limiting-Restoring-Digital-Signals/14BPART1.png)
+*Figure 4.3.1: Simulating the Channel (Bandwidth Limiting) Result.*
+
 
 </details>
 
@@ -304,12 +301,13 @@ To recover the distorted data, a Decision Circuit (often a Comparator with a Var
 <details>
 <summary>View Part 4.5 Diagrams</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 4.5.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 4.5.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 4.5.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Diagrams/Bandwidth_Limiting_Restoring_Digital_Signals/IMG_4689.jpg)
+*Figure 4.5.1: Signal Restoration (The Decision Circuit) Setup.*
+
+![Calibration Waveform](Diagrams/Bandwidth_Limiting_Restoring_Digital_Signals/IMG_4689_(1).jpg)
+
+*Figure 4.5.2: Signal Restoration (The Decision Circuit) Diagram.*
+
 
 </details>
 
@@ -317,22 +315,21 @@ To recover the distorted data, a Decision Circuit (often a Comparator with a Var
 <details>
 <summary>View Part 4.6 Documentation</summary>
 
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig4.jpeg)
-*Figure 4.6.1: Internal CAL signal showing the verified 1Vp-p square wave.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig5.jpeg)
-*Figure 4.6.2: Internal CAL signal showing the square wave with 1khz frequency and 1ms period.*
-![Calibration Waveform](Waveform_Captures/Part1_Results/Part1_resultfig6.jpeg)
-*Figure 4.6.3: Internal CAL signal showing the square wave with 1khz frequency and 1ms period zoomed in for manual computation.*
+![Calibration Waveform](Waveform_Captures/Bandwidth-Limiting-Restoring-Digital-Signals/14BPART2.png)
+
+*Figure 4.6.1: Signal Restoration (The Decision Circuit) Result.*
+
 
 </details>
 
 ## Results & Data Analysis
 
-
-
+**[View or Download Complete Experimental Question and Answers (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures.pdf)**
 
 ## Project Resources
+For full access to the raw datasets, formulas, and the complete Q&A worksheet, please use the links below:
 
-
+* **[Download Complete Experimental Q&A (PDF)](Data/Q&A-Telecommunications-Engineering-Modular-Analysis-of-Analog-FM-and-Digital-PCM-Architectures.pdf)**
+* **[Browse All Captured Documentation](Waveform_Captures/)**
 
 
